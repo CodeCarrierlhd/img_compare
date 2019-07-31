@@ -1,0 +1,6 @@
+<!--pages/jump/jump.wxml-->
+<view wx:for="{{path}}" wx:for-item="item" wx:key="index" wx:for-index="index" class='hid' style='height:{{windowH*0.5}}px'>
+    <view class='center'>
+      <image src='{{item}}' bindload="imgload" bindtouchmove="touchmoveCallback" bindtouchstart="touchstartCallback" style="width:{{scaleWidth}};height:{{scaleHeight}}" mode='scaleToFill'></image>
+    </view>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/cutImage/image.wxml-->
+<canvas canvas-id='canvas' style='width:{{windowW}}px;height:{{windowH*0.5}}px;top:{{windowH}}px'> </canvas>
+  <view  wx:for="{{imgs}}" wx:for-item="item" wx:key="index" wx:for-index="index"  style='width:{{windowW}}px;height:{{windowH*0.5}}px'>
+ <movable-area class="left" style='width:{{windowW}}px;height:{{windowH*0.5}}px' >
+  <movable-view  direction="all" x="{{cenW}}" y="{{cenH}}" class='img_block' damping='10000'>
+        <!-- <canvas canvas-id='canvas' class='center'></canvas>  -->
+        <view  class='center' style="width:{{vW}}px;height:{{vH}}px">
+        <image src='{{item}}'  bindload="imgload"  style="width:{{scaleWidth}};height:{{scaleHeight}}" data-id='{{index}}' bindtouchmove="touchmoveCallback" bindtouchstart="touchstartCallback"></image></view>
+   </movable-view>
+ </movable-area>
+</view>
+
+<canvas canvas-id='canvas1' style='width:{{windowW}}px;height:{{windowH*0.5}}px;top:{{windowH}}px'> </canvas>
+<view  wx:for="{{imgsBottom}}" wx:for-item="item" wx:key="index" wx:for-index="index"style='width:{{windowW}}px;height:{{windowH*0.5}}px'>
+ <movable-area class="left" style='width:{{windowW}}px;height:{{windowH*0.5}}px' >
+  <movable-view  direction="all"  x="{{cenWw}}" y="{{cenHh}}" class='img_block' damping='10000'>
+        <view  class='center' style="width:{{vWw}}px;height:{{vHh}}px">
+          <image src='{{item}}' bindload="imgloadBottom"  style="width:{{sW}};height:{{sH}}" data-id='{{index}}' bindtouchmove="touchmoveCallbackBottom" bindtouchstart="touchstartCallbackBottom"></image></view> 
+   </movable-view>
+ </movable-area>
+</view>
+
+
+
+<view class='zIndex'>
+  <image src='../img/addto.png' class="add_img" bindtap="chooseImage"></image>
+  <image src='../img/addto.png ' class="add_img bottom_img" bindtap="chooseImageBottom" style='top:{{windowH*0.5}}px'></image>
+  <button bindtap='cut' class='cut_but' >截图</button>
+  <button bindtap='jump' class='cut_but sea'>查看相册</button>
+</view>
+

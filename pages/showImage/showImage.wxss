@@ -1,0 +1,37 @@
+/* pages/showImage/showImage.wxss */
+/* .img{
+  display: inline-block;
+} */
+.img-v {
+  width: 100%;
+}
+
+.pic {
+  float: left;
+  position: relative;
+  margin-right: 9px;
+  margin-bottom: 9px;
+  width: 100%;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.weui-uploader {
+  padding: 10rpx;
+}
+
+
+
+.container {
+  padding: 0;
+  align-items: left;
+  padding-left: 15rpx;
+}
+
+.upload-img-btn {
+  width: 50%;
+}

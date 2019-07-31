@@ -1,0 +1,24 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+.img_test{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 100px;
+  top: 50px;
+}
+movable-area {
+  width: 375px;
+  height: 600px;
+
+}
+movable-view{
+  width: 370px;
+  height: 400px;
+}

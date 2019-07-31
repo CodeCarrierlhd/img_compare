@@ -1,0 +1,19 @@
+<view class="weui-uploader">
+  <view class="img-v weui-uploader__bd">
+    <scroll-view class='images' scroll-y="true" scroll-x="true" style="height:100%;width:100%"
+      bindtouchmove="touchmoveCallback" bindtouchstart="touchstartCallback">
+      <view class='pic' wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+        <image class='weui-uploader__img ' src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg"
+          bindload="imgload" style="width:{{scaleWidth}};height:{{scaleHeight}}">
+          <icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon>
+        </image>
+      </view>
+    </scroll-view>
+    <!-- 用来提示用户上传图片 -->
+    <view class="weui-uploader__input-box pic" bindtap="chooseImg"> </view>
+  </view>
+  <button class="upload-img-btn" bindtap="chooseImg" type="primary">拍照 / 上传</button>
+  <navigator class="add_img" bindtap="chooseImg" url="" hover-class="navigator-hover">
+    <image src='../img/addto.png'></image>
+  </navigator>
+</view>

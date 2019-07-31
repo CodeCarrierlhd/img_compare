@@ -1,0 +1,19 @@
+
+.section>movable-area {
+    background: #ddd;
+    position: relative;
+}
+.left {
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.add_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #5f5f5f;
+    width: 32px;
+    height: 32px;
+}

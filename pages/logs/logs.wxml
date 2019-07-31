@@ -1,0 +1,15 @@
+<!--logs.wxml-->
+<!-- <view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view> -->
+<movable-area>
+
+<movable-view  inertia='true' scale='true' scale-min="0.95" scale-max="3"  damping="2" direction="all">  
+
+<image class="img_test" mode='aspectFit' src="../img/addto.png"></image>  
+
+</movable-view>
+
+</movable-area>  

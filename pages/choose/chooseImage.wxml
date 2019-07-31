@@ -1,0 +1,17 @@
+<!--pages/cutImage/image.wxml-->
+<canvas canvas-id='canvas' style='width:{{windowW}}px;height:{{windowH}}px'>
+    <view  wx:for="{{imgs}}" wx:for-item="item" wx:key="index" wx:for-index="index">
+ <movable-area class="left" style='width:{{windowW}}px;height:{{windowH*0.5}}px' >
+  <movable-view  direction="all" scale='true' style='width:{{imgX}}px;height:{{imgY}}px' x="{{windowW*0.5-imgX*0.5}}px" y="{{windowH*0.25-imgY*0.5}}px">
+        <image src='{{item}}'bindload="imgload" bindtouchmove="touchmoveCallback" bindtouchstart="touchstartCallback"  data-id='{{index}}' class='move_img' style="width:{{scaleWidth}};height:{{scaleHeight}}"></image>
+
+   </movable-view>
+ </movable-area>
+     </view>
+ </canvas>
+<view>
+  <image src='../img/addto.png' class="add_img" bindtap="chooseImage"></image>
+  <button bindtap='cut' class='cut_but' >截图</button>
+  <button bindtap='jump' class='cut_but sea'>查看相册</button>
+</view>
+

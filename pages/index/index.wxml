@@ -1,0 +1,12 @@
+<view class="section">
+  <movable-area class="left" style='height:{{nHeight}}'>
+  <image src='../img/addto.png' class="add_img" bindtap="chooseImage"></image>
+    <movable-view  direction="all">
+    <view wx:for="{{imgs}}" wx:for-item="item" wx:key="item.id">
+    <canvas canvas-id='canvas' style='width:{{windowW}}px;height:{{windowH}}px'>
+      <image src='{{item}}' ></image></canvas>
+    </view>
+    </movable-view>
+  </movable-area>
+  <button bindtap='cut'>截图</button>
+</view>
